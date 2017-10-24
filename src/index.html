@@ -7,6 +7,102 @@
   <link rel="stylesheet" href="./css/bundle.css">
 </head>
 <body>
+  <header class="header">
+    <div class="container">
+      <div class="header__items">
+        <div class="header__item header__item--logo"></div>
+        <div class="header__item header__item--logo-text">
+          Поиск и заказ лекарств в аптеках <br>Санкт-Петербурга и Ленинградской области 
+        </div>
+        <div class="header__item header__item--logo-text">
+          Справочная служба «ЭКМИ»
+        </div>
+        <div class="header__item header__item--callback">
+          <a href="#" class="btn btn--inline btn--orange btn--callback"></a>
+          <a class="header__phone" href="tel:+74952680749"><span>+7 (495)</span> 268-07-49</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="navbar navbar--wood navbar--fixed">
+    <div class="container">
+      <div class="navbar__header">
+        <button type="button" class="navbar__toggler">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      
+      <ul class="nav navbar__nav">
+        <li class="nav__item"><a class="nav__link" href="/">Главная</a></li>
+        <li class="nav__item"><a class="nav__link" href="/acme.php">Программы</a></li>
+        <li class="nav__item nav__item--parent">
+          <a class="nav__link" href="#" >Аптекам</a>
+          <ul class="dropdown-menu">
+            <li><a href="/spravka.php">Справка</a></li>
+            <li><a href="/otchet.php">Отчёты</a></li>
+            <li><a href="/demosoft.php">Демо-версии</a></li>
+            <li><a href="/freesoft.php">Утилиты</a></li>
+            <li><a href="/price.php">Прайс-лист</a></li>
+            <li><a href="/base.php">Обновление баз</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a class="nav__link" href="/sprapt.php">Клиенты</a></li>
+        <li class="nav__item"><a class="nav__link" href="/contacts.php">Контакты</a></li>
+      </ul>
+
+      <div id="cart" class="cart">
+        <div id="cart_bg" class="basket-logo basket-logo-empty"></div>
+        <div class="basket-main">
+          <p class="basket-basket">Корзина</p>
+          <p class="basket-count"><b>Пуста</b></p>
+        </div>
+      </div>
+    
+      <a id="cart" class="cart" href="#">
+        <p class="cart__title">Корзина</p> 
+        <p class="cart__contents">Пусто</p>
+      </a>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+  <main class="main">
+    <div class="container">
+      <div class="dust row">
+        <div class="col-sm-12 col-lg-10">
+          <div class="scroll col-sm-6">
+            <div class="scroll__header">
+              <p>Последнее обновление данных<br>24.10.2017 11:28</p>
+              <div class="icon icon--help" id="help"></div>
+            </div>
+            <div class="scroll__body">
+              <div class="alphabet">
+                <div class="alphabet__title">
+                  Алфавитный указатель
+                </div>
+                <ul class="alphabet__list"><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=А">А</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Б">Б</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=В">В</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Г">Г</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Д">Д</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Е">Е</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ж">Ж</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=З">З</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=И">И</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Й">Й</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=К">К</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Л">Л</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=М">М</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Н">Н</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=О">О</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=П">П</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Р">Р</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=С">С</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Т">Т</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=У">У</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ф">Ф</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Х">Х</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ц">Ц</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ш">Ш</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Щ">Щ</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Э">Э</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ю">Ю</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Я">Я</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=0&amp;l=9">0-9</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=A&amp;l=Z">A-Z</a></li></ul>
+              </div>
+              <div class="search">
+                <div class="search__term"></div>
+                <div class="search__filters"></div>
+                <div class="search_btn"></div>
+              </div>
+            </div>
+            <div class="scroll__footer"></div>
+          </div>
+        </div>
+        <aside class="col-sm-12 col-lg-2">
+          Правая колонка
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+    </div>
+  </footer>
   <script src="./js/libs.min.js" type="text/javascript"></script>
   <script src="./js/scripts.js" type="text/javascript"></script>
 </body>

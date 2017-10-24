@@ -2,3 +2,113 @@
 @import "./imports/_mixins.less";
 @import "./imports/_variables.less";
 @import "./imports/_fonts.less";
+
+
+
+body {
+  background-image: url('../img/background-wood-big.png');
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+
+
+/* NAVBAR */
+
+.navbar {
+  height: 56px;
+
+  &--wood {
+    background-image: url('../img/navbar-wood.png');
+    //background-size: cover;
+    background-repeat: repeat-x;
+    background-position: center;
+    background-size: 100%;
+  }
+}
+
+
+
+/* DUST */
+
+.dust {
+  background-image: url('../img/background-dust.png');
+}
+
+
+/* Alphabet */
+
+.alphabet {
+  margin-bottom: 15px;
+
+  text-align: center;
+  &__title {
+    color: #000000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 36px;
+
+    margin-bottom: 12px;
+  }
+
+  &__list {
+    list-style: none;
+    display: block;
+    margin: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  &__link {
+    color: #9a5d2b;
+    font-family: "Times New Roman PSMT";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: #212121;
+
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/* ICONS */
+
+.icon {
+  display: inline;
+  &--help {
+    background-image: url('../img/help.png');
+    background-size: contain;
+    background-position: center;
+    width: 40px;
+    height: 45px;
+  }
+}
+
+
+/* SCROLL */
+
+.scroll {
+  &__header {
+    text-shadow: 1px 3px 3px rgba(75, 31, 10, 0.75);
+    color: #ffffff;
+    font-family: "Times New Roman PSMT";
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 5px;
+    background-image: url('../img/scroll-header.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    
+  }
+}
