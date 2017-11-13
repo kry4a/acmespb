@@ -9,26 +9,26 @@
 <body>
   <header class="header">
     <div class="container">
+      <div class="header__logo"></div>
+      <div class="header__logo-text">Справочная служба «ЭКМИ»</div>
       <div class="header__items">
-        <div class="header__item header__item--logo"></div>
         <div class="header__item header__item--logo-text">
-          Поиск и заказ лекарств в аптеках <br>Санкт-Петербурга и Ленинградской области 
+          Поиск и заказ лекарств в аптеках 
         </div>
         <div class="header__item header__item--logo-text">
-          Справочная служба «ЭКМИ»
-        </div>
-        <div class="header__item header__item--callback">
-          <a href="#" class="btn btn--inline btn--orange btn--callback"></a>
-          <a class="header__phone" href="tel:+74952680749"><span>+7 (495)</span> 268-07-49</a>
+          Санкт-Петербурга и Ленинградской области 
         </div>
       </div>
+      <div class="header__phone">
+        <a class="phone" href="tel:+78123839909"> 383-99-09</a>
+      </div>
+      <div style="clear:both"></div>
     </div>
   </header>
   <nav class="navbar navbar--wood navbar--fixed">
     <div class="container">
       <div class="navbar__header">
         <button type="button" class="navbar__toggler">
-          <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -37,21 +37,21 @@
 
       
       <ul class="nav navbar__nav">
-        <li class="nav__item"><a class="nav__link" href="/">Главная</a></li>
-        <li class="nav__item"><a class="nav__link" href="/acme.php">Программы</a></li>
-        <li class="nav__item nav__item--parent">
+        <li class="nav__item nav__item--active nav__item--main"><a class="nav__link" href="/">Главная</a></li>
+        <li class="nav__item nav__item--soft"><a class="nav__link" href="/acme.php">Программы</a></li>
+        <li class="nav__item nav__item--parent nav__item--apts">
           <a class="nav__link" href="#" >Аптекам</a>
-          <ul class="dropdown-menu">
-            <li><a href="/spravka.php">Справка</a></li>
-            <li><a href="/otchet.php">Отчёты</a></li>
-            <li><a href="/demosoft.php">Демо-версии</a></li>
-            <li><a href="/freesoft.php">Утилиты</a></li>
-            <li><a href="/price.php">Прайс-лист</a></li>
-            <li><a href="/base.php">Обновление баз</a></li>
+          <ul class="dropdown">
+            <li class="dropdown__item"><a href="/spravka.php">Справка</a></li>
+            <li class="dropdown__item"><a href="/otchet.php">Отчёты</a></li>
+            <li class="dropdown__item"><a href="/demosoft.php">Демо-версии</a></li>
+            <li class="dropdown__item"><a href="/freesoft.php">Утилиты</a></li>
+            <li class="dropdown__item"><a href="/price.php">Прайс-лист</a></li>
+            <li class="dropdown__item"><a href="/base.php">Обновление баз</a></li>
           </ul>
         </li>
-        <li class="nav__item"><a class="nav__link" href="/sprapt.php">Клиенты</a></li>
-        <li class="nav__item"><a class="nav__link" href="/contacts.php">Контакты</a></li>
+        <li class="nav__item nav__item--clients"><a class="nav__link" href="/sprapt.php">Клиенты</a></li>
+        <li class="nav__item nav__item--contacts"><a class="nav__link" href="/contacts.php">Контакты</a></li>
       </ul>
 
       <div id="cart" class="cart">
@@ -70,40 +70,173 @@
   </nav>
   <main class="main">
     <div class="container">
-      <div class="dust row">
+      <div class="row row--dust">
         <div class="col-sm-12 col-lg-10">
-          <div class="scroll col-sm-6">
-            <div class="scroll__header">
-              <p>Последнее обновление данных<br>24.10.2017 11:28</p>
-              <div class="icon icon--help" id="help"></div>
-            </div>
-            <div class="scroll__body">
-              <div class="alphabet">
-                <div class="alphabet__title">
-                  Алфавитный указатель
+          <div class="row">
+            <div class="scroll col-sm-6">
+              <div class="scroll__header">
+                Последнее обновление данных<br>24.10.2017 11:28
+                <div class="icon icon--help" id="help"></div>
+              </div>
+              <div class="scroll__body">
+                <div class="alphabet">
+                  <div class="alphabet__title">
+                    Алфавитный указатель
+                  </div>
+                  <ul class="alphabet__list"><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=А">А</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Б">Б</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=В">В</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Г">Г</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Д">Д</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Е">Е</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ж">Ж</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=З">З</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=И">И</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Й">Й</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=К">К</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Л">Л</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=М">М</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Н">Н</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=О">О</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=П">П</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Р">Р</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=С">С</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Т">Т</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=У">У</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ф">Ф</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Х">Х</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ц">Ц</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ш">Ш</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Щ">Щ</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Э">Э</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ю">Ю</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Я">Я</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=0&amp;l=9">0-9</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=A&amp;l=Z">A-Z</a></li></ul>
                 </div>
-                <ul class="alphabet__list"><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=А">А</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Б">Б</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=В">В</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Г">Г</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Д">Д</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Е">Е</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ж">Ж</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=З">З</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=И">И</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Й">Й</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=К">К</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Л">Л</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=М">М</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Н">Н</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=О">О</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=П">П</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Р">Р</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=С">С</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Т">Т</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=У">У</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ф">Ф</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Х">Х</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ц">Ц</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ш">Ш</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Щ">Щ</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Э">Э</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Ю">Ю</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=Я">Я</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=0&amp;l=9">0-9</a></li><li class="alphabet__item"><a class="alphabet__link" href="alphabet.php?f=A&amp;l=Z">A-Z</a></li></ul>
+                <div class="search">
+                  <div class="search__term">
+                    <div class="input-group">
+                      <input type="text" class="input-group__input" placeholder="Введите наименование">
+                      <a href="#" class="input-group__btn"></a>
+                    </div>
+                  </div>
+                  <div class="search__filters filters">
+                    <p class="filters__title">Условия поиска</p>
+                    <div class="filters__filter select">
+                      <input class="select__input" name="0" value="0" type="hidden">
+                      <div class="select__placeholder select__placeholder--big">Выбор региона</div>
+                      <div class="select__inner">
+                            <div class="select__item" data-value="0">Значение</div>
+                            <div class="select__item" data-value="1">Значение</div>
+                            <div class="select__item" data-value="2">Значение</div>
+                        </div>
+                    </div>
+                    <div class="filters__filter select">
+                      <input class="select__input" name="0" value="0" type="hidden">
+                      <div class="select__placeholder select__placeholder--big">Выбор района (населенного пункта)</div>
+                      <div class="select__inner">
+                            <div class="select__item" data-value="0">Значение</div>
+                            <div class="select__item" data-value="1">Значение</div>
+                            <div class="select__item" data-value="2">Значение</div>
+                        </div>
+                    </div>
+                    <div class="filters__filter select">
+                      <input class="select__input" name="0" value="0" type="hidden">
+                      <div class="select__placeholder select__placeholder--big">Выбор метро</div>
+                      <div class="select__inner">
+                            <div class="select__item" data-value="0">Значение</div>
+                            <div class="select__item" data-value="1">Значение</div>
+                            <div class="select__item" data-value="2">Значение</div>
+                        </div>
+                    </div>
+                    <div class="filters__filter select">
+                      <input class="select__input" name="0" value="0" type="hidden">
+                      <div class="select__placeholder select__placeholder--big">Выбор сети аптек</div>
+                      <div class="select__inner">
+                            <div class="select__item" data-value="0">Значение</div>
+                            <div class="select__item" data-value="1">Значение</div>
+                            <div class="select__item" data-value="2">Значение</div>
+                        </div>
+                    </div>
+                    <a href="#" class="filters__cleaner">Снять условия поиска</a>
+                  </div>
+                  <div class="search__button">
+                    <button type="button" class="btn btn--search" id="btn_search">Поиск</button>
+                  </div>
+                </div>
               </div>
-              <div class="search">
-                <div class="search__term"></div>
-                <div class="search__filters"></div>
-                <div class="search_btn"></div>
-              </div>
+              <div class="scroll__footer"></div>
             </div>
-            <div class="scroll__footer"></div>
+            <div class="scroll col-sm-6">
+              <div class="scroll__header">
+                <input type="text" class="input" placeholder="Введите адрес аптеки">
+                
+              </div>
+              <div class="scroll__body">
+                <div class="scroll__map map" >
+                  
+                </div>
+                <a href="#" class="link link--eye">Просмотр карты в полноэкранном режиме</a>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="scroll col-sm-6">
+              <div class="scroll__header">
+                Полезные советы
+              </div>
+              <div class="scroll__body">
+                <div class="news">
+                  <div class="news__img">
+                    <img src="./img/news-1.png" alt="">
+                  </div>
+                  <div class="news__desc">
+                    <p class="news__date">25.09.2017</p>
+                    <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
+                    <a href="#" class="news__link">Читать далее</a>
+                  </div>
+                </div>
+                <div class="news">
+                  <div class="news__img">
+                    <img src="./img/news-2.png" alt="">
+                  </div>
+                  <div class="news__desc">
+                    <p class="news__date">25.09.2017</p>
+                    <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
+                    <a href="#" class="news__link">Читать далее</a>
+                  </div>
+                </div>
+                <div class="news">
+                  <div class="news__img">
+                    <img src="./img/news-3.png" alt="">
+                  </div>
+                  <div class="news__desc">
+                    <p class="news__date">25.09.2017</p>
+                    <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
+                    <a href="#" class="news__link">Читать далее</a>
+                  </div>
+                </div>
+                <div class="news">
+                  <div class="news__img">
+                    <img src="./img/news-4.png" alt="">
+                  </div>
+                  <div class="news__desc">
+                    <p class="news__date">25.09.2017</p>
+                    <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
+                    <a href="#" class="news__link">Читать далее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+            <div class="scroll col-sm-6">
+              <div class="scroll__header">
+                Популярные запросы
+              </div>
+              <div class="scroll__body scroll__body--fw">
+                <ul class="list list--colored">
+                  <li class="list__item"><a class="list__link" href="/drug/neyromultivit">Нейромультивит</a><span class="pull--right">314</span></li>
+                  <li class="list__item"><a class="list__link" href="/drug/viagra">Виагра</a><span class="pull--right">312</span></li>
+                  <li class="list__item"><a class="list__link" href="/drug/detraleks">Детралекс</a><span class="pull--right">282</span></li>
+                  <li class="list__item"><a class="list__link" href="/drug/sialis">Сиалис</a><span class="pull--right">272</span></li>
+                  <li class="list__item"><a class="list__link" href="/drug/brilinta">Брилинта</a><span class="pull--right">247</span></li>
+                  <li class="list__item"><a class="list__link" href="/trade/artra">Артра</a><span class="pull--right">233</span></li>
+                  <li class="list__item"><a class="list__link" href="/drug/kardiomagnil">Кардиомагнил</a><span class="pull--right">232</span></li>
+                  <li class="list__item"><a class="list__link" href="/drug/salofalk">Салофальк</a><span class="pull--right">226</span></li>
+                  <li class="list__item"><a class="list__link" href="/drug/ksarelto">Ксарелто</a><span class="pull--right">223</span></li>
+                  <li class="list__item"><a class="list__link" href="/trade/voltaren">Вольтарен</a><span class="pull--right">222</span></li>
+                </ul>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
           </div>
         </div>
         <aside class="col-sm-12 col-lg-2">
-          Правая колонка
+          <div id="vk_groups"></div>  
         </aside>
+        <div class="row__footer"></div>
+      </div>
+      <div class="row row--dust">
+        
       </div>
     </div>
   </main>
-  <footer class="footer">
-    <div class="container">
-    </div>
-  </footer>
+  
   <script src="./js/libs.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>      
   <script src="./js/scripts.js" type="text/javascript"></script>
 </body>
 </html>
