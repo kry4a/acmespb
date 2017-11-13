@@ -4,13 +4,10 @@
 @import "./imports/_fonts.less";
 
 * {
-  font-family: "Times New Roman";
+  font-family: "Times New Roman",serif;
   box-sizing: border-box;
 }
 
-html {
-  min-width: 350px;
-}
 body {
   background-image: url('../img/background-wood-big.png');
   background-repeat: repeat-y;
@@ -18,13 +15,13 @@ body {
 
 }
 
+
 p {
   margin:0;
 }
 
 
 .container {
-  width: 1250px;
   position: relative;
   
 
@@ -55,7 +52,11 @@ p {
     padding: 5px 15px;
   }
 
-  &__item, &__logo-text, &__phone *{
+
+  &__items {
+
+  }
+  &__item, &__logo-text, &__phone {
     color: #1d316b;
     font-family: Cooper, 'Times', cursive;
     font-size: 37px;
@@ -74,16 +75,22 @@ p {
     }
 
     @media @mobiles {
-      font-size: 22px;
+      font-size: 18px;
       line-height: 26px;
     }
   }
+  
+  
+  
 
   &__logo-text {
     color: #004c31;
     position: absolute;
     left: 15px;
     bottom: 10px;
+    @media @mobiles {
+      display: none;
+    }
   }
 
   &__item {
@@ -118,7 +125,56 @@ p {
     bottom: 10px;
     text-align: center;
     
-    color: #004c31 !important;
+    font-size: 48px;
+    color: #1d316b;
+
+    text-decoration: none;
+    padding-left: 65px;
+
+  
+    @media @mobiles {
+      padding-left: 40px;
+
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 160px;
+    }
+    
+    @media @tablet {
+      padding-left: 50px;
+    }
+    &:before {
+      content: '';
+      width: 47px;
+      height: 47px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      background-image: url('../img/phone.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media @mobiles {
+        width: 30px;
+        height: 30px;
+      }
+
+      @media @desktop {
+        width: 40px;
+        height: 40px;
+      }
+      
+      @media @tablet {
+        width: 35px;
+        height: 35px;
+      }
+
+    } 
+   
   }
 }
 /* NAVBAR */
@@ -126,39 +182,50 @@ p {
 .navbar {
   height: 56px;
   
+  
   .container {
-
+    position: relative;
+    height: 100%;
   }
   &--wood {
     background-image: url('../img/navbar-wood.png');
     //background-size: cover;
+
     background-repeat: repeat-x;
     background-position: center;
     background-size: 100% 100%;
 
-    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.79);
+    box-shadow: 1px 8px 10px rgba(0,0,0,.79);
     margin-bottom: 5px;
+
   }
 
 
   &__toggler {
+    position: absolute;
+
     display: none;
     border: none;
-    width: 34px;
-    height: 21px;
+    width: 50px;
+    height: 30px;
     cursor: pointer;
     background: 0 0;
-    float: right;
+    
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    left: 15px;
 
     .icon-bar {
       background: #ffffff;
       display: block;
       width: 100%;
       height: 3px;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
     
-    @media @mobiles {
+    @media @not-desktop {
       display: block;
     }
   }
@@ -168,36 +235,85 @@ p {
 .nav {
   padding: 5px 0;
   margin: 0;
+  
+  @media @not-desktop {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    max-height: 0;
+    height: auto;
+    transition: max-height .25s ease-out;
+    overflow: hidden;
+    z-index: 99;
+    width: 100%;
+    padding: 0;
+    
+    //background-image: url('../img/filters-bg.png');
+    background-size: 100% 100%;
 
+    &--active {
+      max-height: 500px;
+      transition: max-height .35s ease-in;
+    }
+
+    background-color: #702307;
+
+  }
+  
+  
+  
   &__item {
     position: relative;
     display: inline-block;
-    width: 178px;
+    
     height: 46px;
-    padding: 12px 0;
+    padding: 12px 12px 12px 40px;
     text-align: center;
     
     cursor: pointer;
     
-    padding-left: 30px;
-  
+    @media @desktop-xl {
+      padding-left: 50px;  
+    }
+    
+    
+    @media @mobiles {
+      display: block;
+      width:100%;
+      text-align: left;
+      padding: 12px 50px;
+    }
+    
+    @media @desktop { 
+      padding: 12px 12px 12px 30px;
+    }
+
     &:before {
       content: '';
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
       
       position: absolute;
-      left: 15px;
+      left: 10px;
       top:0;
       bottom: 0;
       margin: auto;
 
       background-position: center;
       background-repeat: no-repeat;
+      background-size: contain;
+      @media @desktop { 
+        width: 20px;
+        height: 20px;
+        left: 5px;
+
+      }
     }
 
     &--active, &:hover {
       background-image: url('../img/nav-active.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
       .nav__link {
           color:#441613;
       }
@@ -239,19 +355,25 @@ p {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
-    margin-bottom: 50px;
+   
   }  
 
   &__footer {
     height: 10px;
-    width: 100%;
-
+    
     margin: 0 -25px;
 
     background-image: url('../img/closer-wood.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+
+    margin-bottom: 50px;
+
+    @media @mobiles {
+      margin: 0 -15px;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -261,15 +383,19 @@ p {
 
 .alphabet {
   margin-bottom: 15px;
-
+  max-width: 370px;
   text-align: center;
+
+  left: 0;
+  right: 0;
+  margin: auto;
+
   &__title {
     color: #000000;
     font-size: 20px;
     font-weight: 400;
-    line-height: 36px;
-
-    margin-bottom: 12px;
+    line-height: 24px;
+    margin-bottom: 10px;
   }
 
   &__list {
@@ -317,14 +443,24 @@ p {
     width: 60px;
     height: 60px;
     
-    
+    @media @mobiles {
+      width: 30px;
+      height: 30px;  
+    }
   }
 }
 
 #help {
   position: absolute;
   right: 15px;
-  top: 12px;
+  top:0;
+  bottom: 0;
+  margin: auto;
+
+  @media @mobiles {
+    right: 10px;
+
+  }
 }
 
 /* SCROLL */
@@ -334,6 +470,10 @@ p {
   display: flex;
   flex-direction:column;
 
+
+  @media @mobiles {
+    padding: 0;
+  }
   &__body {
     background-image: url('../img/scroll-bg.png');
     background-position: center;
@@ -349,8 +489,20 @@ p {
     padding: 10px 20px;
 
     &--fw {
-      padding: 20px 0;
+      padding: 20px 0 10px 0;
     }
+
+    &--flex {
+
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: stretch;
+      align-content: stretch;
+
+    }
+    
     height: 100%;
   }
 
@@ -365,7 +517,7 @@ p {
     align-items: center;
     align-content: stretch;
 
-    height: 75px;
+    height: 75px !important;
     padding: 14px 20px;
 
     margin: 0 -5px;
@@ -387,9 +539,14 @@ p {
 
     background-size: 100% 100%;
     
+  
+
+    .input {
+      margin: 6px 0;
+    }
 
     @media @mobiles {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 20px;
     }
   }
@@ -415,7 +572,6 @@ p {
 }
 
 
-
 /* SEARCH AND FILTERS */
 
 .search {
@@ -431,8 +587,10 @@ p {
     border-radius: 10px;
     margin-bottom: 15px;
 
-    padding: 10px;
+    padding: 10px 15px;
 
+
+    
   }
 
   &__filters {
@@ -458,6 +616,11 @@ p {
     height: 48px;  
     width: 100%;
     padding-left: 19px;
+
+    @media @mobiles {
+      font-size: 14px;
+    }
+
   }
 
   &__btn {
@@ -480,16 +643,13 @@ p {
 .input {
   width: 100%;
   height: 35px;
-  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.75), inset 1px 5px 6px 1px rgba(0, 0, 0, 0.42);
+  box-shadow: 1px 4px 4px rgba(0,0,0,.75),inset 1px 2px 3px 1px rgba(0,0,0,.42);
   border: 2px solid #99371d;
-
   border-radius: 10px;
-
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 35px;
-
-  padding: 0 15px; 
+  padding: 0 15px;
 }
 .filters {
   padding: 10px 30px;
@@ -542,6 +702,8 @@ p {
   &__placeholder {
     position: relative;
     display: block;
+
+    overflow: hidden;
     
     height: 29px;
 
@@ -633,12 +795,8 @@ p {
   
   transition: box-shadow 0.3s ease;
 
-  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.79);
-
-  &:hover {
-    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.79);
-  }
-
+  
+  
 
   &--search {
     text-shadow: 1px 4px 3px rgba(0, 0, 0, 0.75);
@@ -650,17 +808,26 @@ p {
 
     height: 45px;
     width: 250px;
-
-    
     
     background-image: url('../img/btn-wood.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
-    
     border-radius: 25px;
     
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.79);
+
+    &:hover {
+      box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.79);
+    }
+
+    &:active {
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.79);
+    }
+
+    @media @mobiles {
+      width: 200px;
+    }
   }
   
 }
@@ -711,25 +878,25 @@ p {
 
 
 
-
 .news {
-  position: relative;
-  display: flex;
+  &__item {
+    position: relative;
+    display: flex;
 
-  padding: 10px 0;
-  border-bottom: 1px solid #d3b59e;
-  
-  @media @mobiles {
-    display: block;
-  }
-  &__desc {
-    width: ~"calc(100% - 115px)";
-
+    padding: 10px 0;
+    border-bottom: 1px solid #d3b59e;
+    
     @media @mobiles {
-      width: 100%;
+      display: block;
+    }
+    &__desc {
+      width: ~"calc(100% - 115px)";
+
+      @media @mobiles {
+        width: 100%;
+      }
     }
   }
-
   &__img {
     width: 100px;
     height: 100px;
@@ -752,6 +919,10 @@ p {
     line-height: 18px;
 
     margin-bottom: 15px;
+
+    @media @mobiles {
+      margin-bottom: 5px;
+    }
   }
 
   &__title {
@@ -760,6 +931,11 @@ p {
     font-weight: 400;
     line-height: 18px;
     margin-bottom: 15px;
+
+    @media @mobiles {
+      margin-bottom: 5px;
+    }
+
   }
 
   &__link {
@@ -789,8 +965,9 @@ p {
   text-align: center;
 
   &--eye {
-    padding-left: 30px;
-
+    padding-left: 35px;
+    margin-top: 25px;
+    margin-bottom: 20px;
     &:before {
       position: absolute;
       content: '';
@@ -798,6 +975,9 @@ p {
       height: 25px;
 
       left: 10px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
       background-image: url('../img/eye.png');
       background-repeat: no-repeat;
       background-position: center;
@@ -805,4 +985,80 @@ p {
 
     }
   }
+
+}
+
+
+.map {
+  background-color: #cccccc;
+  background-image: url('../img/map.png');
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+
+  @media @mobiles {
+    height: 300px;
+  }
+}
+
+
+
+.cart {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+
+  margin: auto;
+  height: 47px;
+
+  width: 180px;
+
+  background-image: url('../img/cart-bg.png');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  padding: 5px 5px 5px 60px;
+  
+  text-align: center;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #fde7a9;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  &__inner {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #fde7a9;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+
+    width: 30px;
+    height: 25px;
+
+    top: 0;
+    bottom: 0;
+
+    margin: auto;
+
+    background-image: url('../img/cart.png');
+    background-position: center;
+    background-size: contain;
+
+
+  }
+
 }

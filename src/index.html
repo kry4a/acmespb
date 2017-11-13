@@ -19,16 +19,16 @@
           Санкт-Петербурга и Ленинградской области 
         </div>
       </div>
-      <div class="header__phone">
-        <a class="phone" href="tel:+78123839909"> 383-99-09</a>
-      </div>
+      
+      <a class="header__phone" href="tel:+78123839909"> 383-99-09</a>
+      
       <div style="clear:both"></div>
     </div>
   </header>
   <nav class="navbar navbar--wood navbar--fixed">
     <div class="container">
       <div class="navbar__header">
-        <button type="button" class="navbar__toggler">
+        <button type="button" class="navbar__toggler" data-target="nav">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -36,7 +36,7 @@
       </div>
 
       
-      <ul class="nav navbar__nav">
+      <ul id="nav" class="nav navbar__nav">
         <li class="nav__item nav__item--active nav__item--main"><a class="nav__link" href="/">Главная</a></li>
         <li class="nav__item nav__item--soft"><a class="nav__link" href="/acme.php">Программы</a></li>
         <li class="nav__item nav__item--parent nav__item--apts">
@@ -55,17 +55,9 @@
       </ul>
 
       <div id="cart" class="cart">
-        <div id="cart_bg" class="basket-logo basket-logo-empty"></div>
-        <div class="basket-main">
-          <p class="basket-basket">Корзина</p>
-          <p class="basket-count"><b>Пуста</b></p>
-        </div>
+        <p class="cart__title">Корзина</p>
+        <p class="cart__inner">Пусто</p>
       </div>
-    
-      <a id="cart" class="cart" href="#">
-        <p class="cart__title">Корзина</p> 
-        <p class="cart__contents">Пусто</p>
-      </a>
     </div><!-- /.navbar-collapse -->
   </nav>
   <main class="main">
@@ -144,7 +136,7 @@
                 <input type="text" class="input" placeholder="Введите адрес аптеки">
                 
               </div>
-              <div class="scroll__body">
+              <div class="scroll__body scroll__body--flex">
                 <div class="scroll__map map" >
                   
                 </div>
@@ -158,47 +150,50 @@
               <div class="scroll__header">
                 Полезные советы
               </div>
-              <div class="scroll__body">
+              <div class="scroll__body scroll__body--flex">
                 <div class="news">
-                  <div class="news__img">
-                    <img src="./img/news-1.png" alt="">
+                  <div class="news__item">
+                    <div class="news__img">
+                      <img src="./img/news-1.png" alt="">
+                    </div>
+                    <div class="news__desc">
+                      <p class="news__date">25.09.2017</p>
+                      <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
+                      <a href="#" class="news__link">Читать далее</a>
+                    </div>
                   </div>
-                  <div class="news__desc">
-                    <p class="news__date">25.09.2017</p>
-                    <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
-                    <a href="#" class="news__link">Читать далее</a>
+                  <div class="news__item">
+                    <div class="news__img">
+                      <img src="./img/news-2.png" alt="">
+                    </div>
+                    <div class="news__desc">
+                      <p class="news__date">25.09.2017</p>
+                      <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
+                      <a href="#" class="news__link">Читать далее</a>
+                    </div>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img">
+                      <img src="./img/news-3.png" alt="">
+                    </div>
+                    <div class="news__desc">
+                      <p class="news__date">25.09.2017</p>
+                      <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
+                      <a href="#" class="news__link">Читать далее</a>
+                    </div>
+                  </div>
+                  <div class="news__item">
+                    <div class="news__img">
+                      <img src="./img/news-4.png" alt="">
+                    </div>
+                    <div class="news__desc">
+                      <p class="news__date">25.09.2017</p>
+                      <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
+                      <a href="#" class="news__link">Читать далее</a>
+                    </div>
                   </div>
                 </div>
-                <div class="news">
-                  <div class="news__img">
-                    <img src="./img/news-2.png" alt="">
-                  </div>
-                  <div class="news__desc">
-                    <p class="news__date">25.09.2017</p>
-                    <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
-                    <a href="#" class="news__link">Читать далее</a>
-                  </div>
-                </div>
-                <div class="news">
-                  <div class="news__img">
-                    <img src="./img/news-3.png" alt="">
-                  </div>
-                  <div class="news__desc">
-                    <p class="news__date">25.09.2017</p>
-                    <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
-                    <a href="#" class="news__link">Читать далее</a>
-                  </div>
-                </div>
-                <div class="news">
-                  <div class="news__img">
-                    <img src="./img/news-4.png" alt="">
-                  </div>
-                  <div class="news__desc">
-                    <p class="news__date">25.09.2017</p>
-                    <p class="news__title">Продукты, которые помогут похудеть и спасут от переедания</p>
-                    <a href="#" class="news__link">Читать далее</a>
-                  </div>
-                </div>
+                <a href="#" class="link">Все новости</a>
               </div>
               <div class="scroll__footer"></div>
             </div>
@@ -206,7 +201,7 @@
               <div class="scroll__header">
                 Популярные запросы
               </div>
-              <div class="scroll__body scroll__body--fw">
+              <div class="scroll__body scroll__body--fw scroll__body--flex">
                 <ul class="list list--colored">
                   <li class="list__item"><a class="list__link" href="/drug/neyromultivit">Нейромультивит</a><span class="pull--right">314</span></li>
                   <li class="list__item"><a class="list__link" href="/drug/viagra">Виагра</a><span class="pull--right">312</span></li>
@@ -219,16 +214,17 @@
                   <li class="list__item"><a class="list__link" href="/drug/ksarelto">Ксарелто</a><span class="pull--right">223</span></li>
                   <li class="list__item"><a class="list__link" href="/trade/voltaren">Вольтарен</a><span class="pull--right">222</span></li>
                 </ul>
+                <a href="#" class="link">ТОП 100 препаратов</a>
               </div>
               <div class="scroll__footer"></div>
             </div>
           </div>
         </div>
-        <aside class="col-sm-12 col-lg-2">
+        <aside class="col-sm-12 col-lg-2"> 
           <div id="vk_groups"></div>  
         </aside>
-        <div class="row__footer"></div>
       </div>
+      <div class="row__footer"></div>
       <div class="row row--dust">
         
       </div>
