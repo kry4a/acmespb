@@ -4,7 +4,7 @@
 @import "./imports/_fonts.less";
 
 * {
-  font-family: "Times New Roman",serif;
+  font-family: "Times New Roman",serif !important;
   box-sizing: border-box;
 }
 
@@ -33,7 +33,7 @@ p {
 .header {
   background-image:  url('../img/header.png');
   background-position: center;
-  height: 204px;
+  height: 190px;
 
   @media @desktop {
     height: 180px;
@@ -414,7 +414,6 @@ p {
 
   &__link {
     color: #9a5d2b;
-    font-family: "Times New Roman PSMT";
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -524,7 +523,6 @@ p {
 
     text-shadow: 1px 3px 3px rgba(75, 31, 10, 0.75);
     color: #ffffff;
-    font-family: "Times New Roman PSMT";
     
     font-size: 22px;
     font-weight: 400;
@@ -552,11 +550,12 @@ p {
   }
 
   &__footer {
-    height: 10px;
+    height: 14px;
+    min-height: 14px;
 
     margin: 0 -5px;
 
-    background-image: url('../img/closer-wood.png');
+    background-image: url('../img/closer-small.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
