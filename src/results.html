@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Экми</title>
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/bundle.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__logo"></div>
+      <div class="header__logo-text">Справочная служба «ЭКМИ»</div>
+      <div class="header__items">
+        <div class="header__item header__item--logo-text">
+          Поиск и заказ лекарств в аптеках 
+        </div>
+        <div class="header__item header__item--logo-text">
+          Санкт-Петербурга и Ленинградской области 
+        </div>
+      </div>
+      
+      <a class="header__phone" href="tel:+78123839909"> 383-99-09</a>
+      
+      <div style="clear:both"></div>
+    </div>
+  </header>
+  <nav class="navbar navbar--wood navbar--fixed">
+    <div class="container">
+      <div class="navbar__header">
+        <button type="button" class="navbar__toggler" data-target="nav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      
+      <ul id="nav" class="nav navbar__nav">
+        <li class="nav__item nav__item--active nav__item--main"><a class="nav__link" href="/">Главная</a></li>
+        <li class="nav__item nav__item--soft"><a class="nav__link" href="/acme.php">Программы</a></li>
+        <li class="nav__item nav__item--parent nav__item--apts">
+          <a class="nav__link" href="#" >Аптекам</a>
+          <ul class="dropdown">
+            <li class="dropdown__item"><a href="/spravka.php">Справка</a></li>
+            <li class="dropdown__item"><a href="/otchet.php">Отчёты</a></li>
+            <li class="dropdown__item"><a href="/demosoft.php">Демо-версии</a></li>
+            <li class="dropdown__item"><a href="/freesoft.php">Утилиты</a></li>
+            <li class="dropdown__item"><a href="/price.php">Прайс-лист</a></li>
+            <li class="dropdown__item"><a href="/base.php">Обновление баз</a></li>
+          </ul>
+        </li>
+        <li class="nav__item nav__item--clients"><a class="nav__link" href="/sprapt.php">Клиенты</a></li>
+        <li class="nav__item nav__item--contacts"><a class="nav__link" href="/contacts.php">Контакты</a></li>
+      </ul>
+
+      <div id="cart" class="cart">
+        <p class="cart__title">Корзина</p>
+        <p class="cart__inner">Пусто</p>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+  <main class="main">
+    <div class="container">
+      <div class="row row--dust">
+        <div class="col-sm-12 col-lg-10">
+          <div class="row">
+            <div class="scroll col-sm-6">
+              <div class="scroll__header">
+                <a href="#" class="scroll__link scroll__link--prev">В начало <br>поиска <span class="icon icon--prev"></span></a>
+                <a href="#" class="scroll__link scroll__link--next">Торговые <br>наименования</a>
+                
+                
+              </div>
+              <div class="scroll__body">
+                <div class="drug" style="">
+                  <h1 class="drug__name">Цитрамон П</h1>
+                  <p class="drug__desc">(Рецепт)</p>
+                  <p class="drug__help">цена, найти, купить</p>
+                </div>
+                <div class="search">
+                  <input type="hidden" class="input-group__input" placeholder="Введите наименование">
+                  <div class="search__filters filters">
+                    <p class="filters__title">Условия поиска</p>
+                    <div class="filters__filter select">
+                      <input class="select__input" name="0" value="0" type="hidden">
+                      <div class="select__placeholder select__placeholder--big">выбор региона</div>
+                      <div class="select__inner">
+                            <div class="select__item" data-value="0">Значение</div>
+                            <div class="select__item" data-value="1">Значение</div>
+                            <div class="select__item" data-value="2">Значение</div>
+                        </div>
+                    </div>
+                    <div class="filters__filter select">
+                      <input class="select__input" name="0" value="0" type="hidden">
+                      <div class="select__placeholder select__placeholder--big">выбор района (населенного пункта)</div>
+                      <div class="select__inner">
+                            <div class="select__item" data-value="0">Значение</div>
+                            <div class="select__item" data-value="1">Значение</div>
+                            <div class="select__item" data-value="2">Значение</div>
+                        </div>
+                    </div>
+                    <div class="filters__filter select">
+                      <input class="select__input" name="0" value="0" type="hidden">
+                      <div class="select__placeholder select__placeholder--big">выбор метро</div>
+                      <div class="select__inner">
+                            <div class="select__item" data-value="0">Значение</div>
+                            <div class="select__item" data-value="1">Значение</div>
+                            <div class="select__item" data-value="2">Значение</div>
+                        </div>
+                    </div>
+                    <div class="filters__filter select">
+                      <input class="select__input" name="0" value="0" type="hidden">
+                      <div class="select__placeholder select__placeholder--big">выбор сети аптек</div>
+                      <div class="select__inner">
+                            <div class="select__item" data-value="0">Значение</div>
+                            <div class="select__item" data-value="1">Значение</div>
+                            <div class="select__item" data-value="2">Значение</div>
+                        </div>
+                    </div>
+                    <a href="#" class="filters__cleaner">Снять условия поиска</a>
+                  </div>
+                  <div class="search__button">
+                    <button type="button" class="btn btn--search" id="btn_search">Поиск</button>
+                  </div>
+                </div>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+            <div class="scroll col-sm-6">
+              <div class="scroll__header">
+                <a href="№" class="scroll__link" style="line-height: 50px;">Аннотация</a>
+              </div>
+              <div class="scroll__body scroll__body--flex">
+                <div class="supply">
+                  <p class="supply__title">Действующее вещество</p>
+                  <p class="supply__name">Ацетилсалициловая кислота + Кофеин + Парацетамол + еще одна строка</p>
+                  <div class="select supply__select">
+                    <input class="select__input" name="0" value="0" type="hidden">
+                    <div class="select__placeholder select__placeholder--big">выбор синонима</div>
+                    <div class="select__inner">
+                          <div class="select__item" data-value="0">Значение</div>
+                          <div class="select__item" data-value="1">Значение</div>
+                          <div class="select__item" data-value="2">Значение</div>
+                      </div>
+                  </div>
+                </div>
+                <div class="supply">
+                  <p class="supply__title">Фармакологическая группа</p>
+                  <p class="supply__name">АТХ:N02BA Салициловая кислота и ее производные + еще одна строка</p>
+                  <div class="select supply__select">
+                    <input class="select__input" name="0" value="0" type="hidden">
+                    <div class="select__placeholder select__placeholder--big">выбор аналога</div>
+                    <div class="select__inner">
+                          <div class="select__item" data-value="0">Значение</div>
+                          <div class="select__item" data-value="1">Значение</div>
+                          <div class="select__item" data-value="2">Значение</div>
+                      </div>
+                  </div>
+                </div>
+                <div class="search__term search__term--sm">
+                  <div class="select">
+                    <input class="select__input" name="0" value="0" type="hidden">
+                    <div class="select__placeholder select__placeholder--big">таб. №6</div>
+                    <div class="select__inner">
+                          <div class="select__item" data-value="0">Значение</div>
+                          <div class="select__item" data-value="1">Значение</div>
+                          <div class="select__item" data-value="2">Значение</div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-12">
+              <div class="result">
+                <div class="result__count">
+                  Найдено позиций: 856
+                </div>
+                <div class="result__sort">
+                  Сортировка: <a href="#" class="sort sort--active">по наименованию</a> <a href="#" class="sort">по цене</a>
+                </div>  
+                
+                <ul class="pagination result__pagination">
+                  <li class="pagination__item pagination__item--active">1</li>
+                  <li class="pagination__item">2</li>
+                  <li class="pagination__item">3</li>
+                  <li class="pagination__item">4</li>
+                  <li class="pagination__item">5</li>
+                  <li class="pagination__item pagination__item--last">></li>
+                </ul>
+              </div>
+              
+
+              <div class="table scroll">
+                <div class="table__head">
+                  <div class="table__row ">
+                    <div class="table__cell table__cell--25">Наименование</div>
+                    <div class="table__cell">Страна</div>
+                    <div class="table__cell">Аптека</div>
+                    <div class="table__cell table__cell--25">Адрес</div>
+                    <div class="table__cell table__cell--10">Прайс</div>
+                    <div class="table__cell table__cell--10">Цена</div>
+                    <div class="table__cell table__cell--5">Заказ</div>
+                  </div>
+                </div>
+                <div class="table__body">
+                  <div class="table__row table__row--bg">
+                    <div class="table__cell table__cell--name">
+                      <p class="sra" title="Карточка препарата">цитрамон п таб. №6</p>
+                    </div>
+                    <div class="table__cell table__cell--country">
+                      Россия
+                    </div>
+                    <div class="table__cell">
+                      <a class="link link--table" title="Перейти в аптеку" href="#">ЛекОптТорг</a>
+                    </div>
+                    <div class="table__cell">
+                      <a class="link link--table"  title="Посмотреть на карте" href="#">Бульвар Трудящихся, д.27, к.3, Колпино</a>, тел.641-01-01
+                    </div>
+                    <div class="table__cell table__cell--date">20.11.17</div>
+                    <div class="table__cell table__cell--price">4.00</div>
+                    <div class="table__cell">
+                      <div class="icon icon--cart"></div>
+                    </div>
+                  </div>
+                  <div class="table__row table__row--bg">
+                    <div class="table__cell table__cell--name">
+                      <p class="sra" title="Карточка препарата">цитрамон п таб. №6</p>
+                    </div>                        
+                    <div class="table__cell table__cell--country">Россия</div>
+                    <div class="table__cell">
+                      <a class="link link--table" title="Перейти в аптеку" href="#">Брегор-Фарм</a></div>
+                    <div class="table__cell">
+                      <a class="link link--table" title="Посмотреть на карте" href="#">Декабристов ул., д.62/64</a>, тел.971-34-43 
+                    </div>
+                    <div class="table__cell table__cell--date">10.11.17</div>
+                    <div class="table__cell table__cell--price">6.00</div>
+                    <div class="table__cell">
+                      <div class="icon icon--cart"></div>
+                    </div>
+                  </div>
+                  <div class="table__row table__row--bg">
+                    <div class="table__cell table__cell--name">
+                      <p class="sra" title="Карточка препарата">цитрамон п таб. №6</p>
+                    </div>
+                    <div class="table__cell table__cell--country">
+                      Россия
+                    </div>
+                    <div class="table__cell">
+                      <a class="link link--table" title="Перейти в аптеку" href="#">Народная аптека</a>
+                    </div>
+                    <div class="table__cell">
+                      <a class="link link--table"  title="Посмотреть на карте" href="#">Трефолева ул., д.22/25, лит.А</a>, тел.86-95-2924
+                    </div>
+                    <div class="table__cell table__cell--date">16.11.17</div>
+                    <div class="table__cell table__cell--price">1.00</div>
+                    <div class="table__cell">
+                      <div class="icon icon--cart"></div>
+                    </div>
+                  </div>
+                  <div class="table__row table__row--bg">
+                    <div class="table__cell table__cell--name">
+                      <p class="sra" title="Карточка препарата">цитрамон п таб. №6</p>
+                    </div>
+                    <div class="table__cell table__cell--country">
+                      Россия
+                    </div>
+                    <div class="table__cell">
+                      <a class="link link--table" title="Перейти в аптеку" href="#">ЛекОптТорг</a>
+                    </div>
+                    <div class="table__cell">
+                      <a class="link link--table"  title="Посмотреть на карте" href="#">Бульвар Трудящихся, д.27, к.3, Колпино</a>, тел.641-01-01
+                    </div>
+                    <div class="table__cell table__cell--date">20.11.17</div>
+                    <div class="table__cell table__cell--price">4.00</div>
+                    <div class="table__cell">
+                      <div class="icon icon--cart"></div>
+                    </div>
+                  </div>
+                  <div class="table__row table__row--bg">
+                    <div class="table__cell table__cell--name">
+                      <p class="sra" title="Карточка препарата">цитрамон п таб. №6</p>
+                    </div>                        
+                    <div class="table__cell table__cell--country">Россия</div>
+                    <div class="table__cell">
+                      <a class="link link--table" title="Перейти в аптеку" href="#">Брегор-Фарм</a></div>
+                    <div class="table__cell">
+                      <a class="link link--table" title="Посмотреть на карте" href="#">Декабристов ул., д.62/64</a>, тел.971-34-43 
+                    </div>
+                    <div class="table__cell table__cell--date">10.11.17</div>
+                    <div class="table__cell table__cell--price">6.00</div>
+                    <div class="table__cell">
+                      <div class="icon icon--cart"></div>
+                    </div>
+                  </div>
+                  <div class="table__row table__row--bg">
+                    <div class="table__cell table__cell--name">
+                      <p class="sra" title="Карточка препарата">цитрамон п таб. №6</p>
+                    </div>
+                    <div class="table__cell table__cell--country">
+                      Россия
+                    </div>
+                    <div class="table__cell">
+                      <a class="link link--table" title="Перейти в аптеку" href="#">Народная аптека</a>
+                    </div>
+                    <div class="table__cell">
+                      <a class="link link--table"  title="Посмотреть на карте" href="#">Трефолева ул., д.22/25, лит.А</a>, тел.86-95-2924
+                    </div>
+                    <div class="table__cell table__cell--date">16.11.17</div>
+                    <div class="table__cell table__cell--price">1.00</div>
+                    <div class="table__cell">
+                      <div class="icon icon--cart"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="table__footer"></div>
+              </div>
+              <div class="result">
+                <ul class="pagination result__pagination">
+                  <li class="pagination__item pagination__item--active">1</li>
+                  <li class="pagination__item">2</li>
+                  <li class="pagination__item">3</li>
+                  <li class="pagination__item">4</li>
+                  <li class="pagination__item">5</li>
+                  <li class="pagination__item pagination__item--last">></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="col-sm-12 col-lg-2"> 
+          <div class="aside__item hidden--mb">
+            <div id="vk_groups"></div> 
+          </div>
+          <div class="aside__item">
+            <div class="scroll">
+              <div class="scroll__header scroll__header--sm">Синонимы</div>
+              <div class="scroll__body scroll__body--fw">
+                <ul class="list list--colored">
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Кофицил-плюс</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Цитрамарин</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Цитрапар</a></li>
+                </ul>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+          </div>
+
+          <div class="aside__item">
+            <div class="scroll">
+              <div class="scroll__header scroll__header--sm">Аналоги</div>
+              <div class="scroll__body scroll__body--fw">
+                <ul class="list list--colored">
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Алка-Зельтцер</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Аспизол</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Аспирин</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Кофицил-плюс</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Мигренол</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Таспир</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Упсарин Упса</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Цефекон Д</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Цитрапар</a></li>         
+                </ul>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+      <div class="row__footer"></div>
+    </div>
+  </main>
+  
+  <script src="./js/libs.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>      
+  <script src="./js/scripts.js" type="text/javascript"></script>
+</body>
+</html>
