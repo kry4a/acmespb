@@ -603,6 +603,7 @@ p {
     align-content: stretch;
 
     height: 75px !important;
+    min-height: 75px;
     padding: 14px 20px;
 
     margin: 0 -5px;
@@ -828,6 +829,13 @@ p {
   &__button {
     text-align: center;
     margin-bottom: 10px;
+
+    @media @tablet {
+      position: absolute;
+      bottom: 33px;
+      left: 0;
+      right: 0;
+    }
   }
 
 }
@@ -892,6 +900,8 @@ p {
   background-size: 100% 100%;
   
   margin-bottom: 20px;
+
+  border-radius: 10px;
 
   &__title {
     color:#555555;
@@ -1652,6 +1662,13 @@ p {
     height: auto;
     margin-bottom: 15px;
   }
+
+
+  @media @tablet {
+    height: 80px;
+  }
+
+
   &__count {
     width: 200px;
     position: absolute;
@@ -1671,6 +1688,10 @@ p {
       position: relative;
       margin-bottom: 10px;
     }
+
+    @media @tablet {
+      top:40px;
+    }
   }
   &__sort {
     position: absolute;
@@ -1684,6 +1705,11 @@ p {
       position: relative;
       margin-bottom: 10px;
       height: auto;
+    }
+
+    @media @tablet {
+        bottom: auto;
+        top: 5px;
     }
   }
   &__pagination {
@@ -1751,6 +1777,9 @@ p {
   &__item {
     width: 48%;
     max-width: 470px;
+
+    display: flex;
+    flex-direction:column;
   }
 
   @media @mobiles {
@@ -1797,8 +1826,9 @@ p {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     
-    min-height: 350px;
     
+    
+    height: 100%;
 
     @media @mobiles {
       padding:15px;
@@ -1930,7 +1960,13 @@ p {
       padding-left: 50px;
       margin-bottom: 10px;
     }
-    
+    @media @tablet {
+      width: 100%;
+      float: none;
+      display: block;
+      padding-left: 50px;
+      margin-bottom: 10px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -1944,7 +1980,11 @@ p {
       background-repeat: no-repeat;
       background-position: center;
 
-      @media @mobiles {
+      @media @mobile-xs {
+        left: 0;
+      }
+
+      @media @tablet {
         left: 0;
       }
     }
@@ -1967,6 +2007,11 @@ p {
     @media @mobile-xs {
       width: 100%;
       float: none;
+    }
+
+    @media @tablet {
+        width: 100%;
+        float: none;
     }
     padding: 0 15px;
 
@@ -2006,6 +2051,10 @@ p {
     border-left: 2px solid #AC672D;
 
     padding: 5px 50px 8px 50px;
+
+    @media @tablet {
+      font-size: 16px;
+    }
   }
 
 }
@@ -2054,6 +2103,12 @@ p {
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: center;
+      
+      @media @tablet {
+        width: 40px;
+        height: 40px;
+        top: -5px;
+      }
       @media @mobiles {
         top:0;
         bottom: 0;
@@ -2072,13 +2127,26 @@ p {
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: center;
+      
+      @media @tablet {
+        width: 40px;
+        height: 40px;
+        top: -5px;
+      }
+
       @media @mobiles {
         top:0;
         bottom: 0;
         margin: auto;
       }
     }
+    
 
+    @media @tablet {
+      width: 95%;
+      font-size: 12px;
+      
+    }
     @media @mobiles {
       height: auto;
     }
@@ -2086,7 +2154,7 @@ p {
 
   &__table {
     display: table;
-
+    width: 100%;
   }
 
   &__row {
@@ -2102,10 +2170,13 @@ p {
     border-bottom: 1px solid #bdc1a3;
     font-size: 18px;
     padding: 5px 10px;
+    
+
     @media @mobile-xs {
       font-size: 16px;
     }
     position: relative;
+    
     &:after {
       content:'';
       
@@ -2120,10 +2191,14 @@ p {
     }
     
     &:first-child {
-      padding: 5px 30px;
-      text-align: center;
+      padding: 5px 15px;
+      text-align: left;
       width: 20%;
       color: #8c451a;
+    
+      @media @tablet {
+        padding: 5px 15px;
+      }
 
       @media @mobile-xs {
         padding: 5px 15px;
@@ -2169,4 +2244,132 @@ p {
 
    
   }
+}
+
+.trades {
+  margin-bottom: 15px;
+  box-shadow: 1px 3px 10px rgba(0,0,0,.79), 
+  1px -5px 10px rgba(255,255,255,.79);
+  overflow: hidden;
+  border-radius: 8px;
+
+  &__title {
+    background-image: url('../img/trades.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    text-align: center;
+    font-size: 21px;
+    padding: 10px;
+    color:#4f2b0d;
+
+    border-radius: 8px 8px 0 0;
+  }
+
+  &__body { 
+    background-image: url('../img/filters-bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 240px;
+  }
+
+  &__footer {
+    background-image: url('../img/trades.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: 10px;
+
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+  }
+
+  &__list {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding:0;
+
+    border: 1px solid #bdc1a3;
+  }
+
+  &__item {
+    
+    height: 29px;
+    font-size: 18px;
+    color: #8c5222;
+    padding: 0 25px;
+    line-height: 29px;
+    display: block;
+    background-image: linear-gradient(to bottom,#f9f6eb 0,#e6dbca 100%);
+    border-bottom: 1px solid #bdc1a3;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover, &.active {
+      background-image:linear-gradient(to top,#511c04 0,#b1390d 100%);
+      color: #ffffff;
+
+    }
+    
+  }
+}
+
+.baron {
+  height:240px;
+  overflow-y:scroll;
+  
+  &__track {
+    width: 20px;
+    border: 1px solid #b5773f;
+    cursor: pointer;
+    box-shadow: inset 1px 5px 5px rgba(0, 0, 0, 0.32);
+    background-image: url('../img/filters-bg.png');
+    background-size: 100% 100%;
+  }
+
+  &__bar {
+    cursor: pointer;
+    width: 15px;
+    right: 1px;
+    background-image: url('../img/bar.png');
+    background-size: 100% 100%;
+  }
+
+  &__free {
+    cursor: pointer;
+    top:20px;
+    bottom: 20px;
+    
+  }
+}
+
+.baron__control {
+  display: block;
+  position: absolute;
+  color: #ffffff;
+  content: '';
+
+  
+  background-size: 100% 100%;
+  font-size: 12px;
+  width: 20px;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+}
+.baron__up {
+    top: 0;
+    background-image: url('../img/bar-control-up.png');
+}
+
+.baron__down {
+  bottom: 0;
+  background-image: url('../img/bar-control-down.png');
 }

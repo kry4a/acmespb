@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Экми</title>
+  <link rel="stylesheet" href="./css/libs.min.css">
+  <link rel="stylesheet" href="./css/bundle.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__logo"></div>
+      <div class="header__logo-text">Справочная служба «ЭКМИ»</div>
+      <div class="header__items">
+        <div class="header__item header__item--logo-text">
+          Поиск и заказ лекарств в аптеках 
+        </div>
+        <div class="header__item header__item--logo-text">
+          Санкт-Петербурга и Ленинградской области 
+        </div>
+      </div>
+      
+      <a class="header__phone" href="tel:+78123839909"> 383-99-09</a>
+      
+      <div style="clear:both"></div>
+    </div>
+  </header>
+  <nav class="navbar navbar--wood navbar--fixed">
+    <div class="container">
+      <div class="navbar__header">
+        <button type="button" class="navbar__toggler" data-target="nav">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      
+      <ul id="nav" class="nav navbar__nav">
+        <li class="nav__item nav__item--active nav__item--main"><a class="nav__link" href="/">Главная</a></li>
+        <li class="nav__item nav__item--soft"><a class="nav__link" href="/acme.php">Программы</a></li>
+        <li class="nav__item nav__item--parent nav__item--apts">
+          <a class="nav__link" href="#" >Аптекам</a>
+          <ul class="dropdown">
+            <li class="dropdown__item"><a href="/spravka.php">Справка</a></li>
+            <li class="dropdown__item"><a href="/otchet.php">Отчёты</a></li>
+            <li class="dropdown__item"><a href="/demosoft.php">Демо-версии</a></li>
+            <li class="dropdown__item"><a href="/freesoft.php">Утилиты</a></li>
+            <li class="dropdown__item"><a href="/price.php">Прайс-лист</a></li>
+            <li class="dropdown__item"><a href="/base.php">Обновление баз</a></li>
+          </ul>
+        </li>
+        <li class="nav__item nav__item--clients"><a class="nav__link" href="/sprapt.php">Клиенты</a></li>
+        <li class="nav__item nav__item--contacts"><a class="nav__link" href="/contacts.php">Контакты</a></li>
+      </ul>
+
+      <div id="cart" class="cart">
+        <p class="cart__title">Корзина</p>
+        <p class="cart__inner">Пусто</p>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+  <main class="main">
+    <div class="container">
+      <div class="row row--dust">
+        <div class="col-sm-12 col-lg-10">
+          <div class="row">
+            <div class="scroll col-sm-6">
+              <div class="scroll__header">
+                <a href="#" class="scroll__link scroll__link--prev" style="left: 0;right: 0; width: 200px; line-height: 50px;">В начало поиска <span class="icon icon--prev"></span></a>
+              </div>
+              <div class="scroll__body">
+                <div class="drug" style="">
+                  <h1 class="drug__name">Цитрамон П</h1>
+                </div>
+                <div class="trades">
+                  <div class="trades__title">
+                    Выбор торгового наименования
+                  </div>
+                  <div class="trades__body baron baron__root baron__clipper _simple">
+                    <div class="baron__scroller">
+                    <ul class="trades__list" size="12" name="trades" id="trades">
+                      <li class="trades__item trades__item--active" value="all" selected="" class="active">Все</li>
+                      <li class="trades__item" value="/drug/tsitramon_akva">Цитрамон аква</li>
+                      <li class="trades__item" value="/drug/tsitramon_p">Цитрамон п</li>
+                      <li class="trades__item" value="/drug/tsitramon_p_aveksima">Цитрамон п авексима</li>
+                      <li class="trades__item" value="/drug/tsitramon_ultra">Цитрамон ультра</li>
+                      <li class="trades__item" value="/drug/tsitramon_lekt">Цитрамон-лект</li>
+                      <li class="trades__item" value="/drug/tsitramon_ekstrakap">Цитрамон-экстракап</li>
+                      <li class="trades__item" value="/drug/tsitramon_p_aveksima">Цитрамон п авексима</li>
+                      <li class="trades__item" value="/drug/tsitramon_ultra">Цитрамон ультра</li>
+                      <li class="trades__item" value="/drug/tsitramon_lekt">Цитрамон-лект</li>
+                      <li class="trades__item" value="/drug/tsitramon_p_aveksima">Цитрамон п авексима</li>
+                      <li class="trades__item" value="/drug/tsitramon_ultra">Цитрамон ультра</li>
+                      <li class="trades__item" value="/drug/tsitramon_lekt">Цитрамон-лект</li>
+                      <li class="trades__item" value="/drug/tsitramon_p_aveksima">Цитрамон п авексима</li>
+                      <li class="trades__item" value="/drug/tsitramon_ultra">Цитрамон ультра</li>
+                      <li class="trades__item" value="/drug/tsitramon_lekt">Цитрамон-лект</li>
+                    </ul>
+                    </div>
+                    <div class="baron__track">
+                      <div class="baron__control baron__up"></div>
+                      <div class="baron__free">
+                          <div class="baron__bar"></div>
+                      </div>
+                      <div class="baron__control baron__down"></div>
+                    </div>
+                  </div>
+                  <div class="trades__footer">
+                    
+                  </div>
+                </div>
+
+                <div class="search">
+                  <div class="search__button">
+                    <button type="button" class="btn btn--search" id="btn_search">Поиск</button>
+                  </div>
+                </div>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+            <div class="scroll col-sm-6">
+              <div class="scroll__header">
+                <input type="text" class="input" placeholder="Введите адрес или выберите аптеку">
+                
+              </div>
+              <div class="scroll__body scroll__body--fw scroll__body--flex">
+                <div class="scroll__map map" >
+                  
+                </div>
+                <a href="#" class="link link--eye">Просмотр карты в полноэкранном режиме</a>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+          </div>
+        </div>
+        <aside class="col-sm-12 col-lg-2"> 
+          <div class="aside__item">
+            <div id="vk_groups"></div>  
+          </div>
+          <div class="aside__item">
+            <div class="scroll">
+              <div class="scroll__header scroll__header--sm">Синонимы</div>
+              <div class="scroll__body scroll__body--fw">
+                <ul class="list list--colored">
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Кофицил-плюс</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Цитрамарин</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Цитрапар</a></li>
+                </ul>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+          </div>
+
+          <div class="aside__item">
+            <div class="scroll">
+              <div class="scroll__header scroll__header--sm">Аналоги</div>
+              <div class="scroll__body scroll__body--fw">
+                <ul class="list list--colored">
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Алка-Зельтцер</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Аспизол</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Аспирин</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Кофицил-плюс</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Мигренол</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Таспир</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Упсарин Упса</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Цефекон Д</a></li>
+                  <li class="list__item list__item--sm"><a class="list__link" href="#">Цитрапар</a></li>         
+                </ul>
+              </div>
+              <div class="scroll__footer"></div>
+            </div>
+          </div>
+        </aside>
+
+        
+      </div>
+      <div class="row__footer"></div>
+      
+      
+    </div>
+  </main>
+  
+  <script src="./js/libs.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?121"></script>      
+  <script src="./js/scripts.js" type="text/javascript"></script>
+</body>
+</html>
